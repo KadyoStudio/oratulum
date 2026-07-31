@@ -127,8 +127,8 @@ export default function Dashboard() {
                       style={{
                         height: `${h}%`,
                         background: isToday
-                          ? "linear-gradient(180deg,#c06b3e,#d98b5f)"
-                          : "linear-gradient(180deg,#2f5d50,#4a7e6e)",
+                          ? "linear-gradient(180deg,#cbb74c,#b9a43e)"
+                          : "linear-gradient(180deg,#4a3d2f,#6b5a46)",
                         animationDelay: `${0.3 + i * 0.06}s`,
                       }}
                     />

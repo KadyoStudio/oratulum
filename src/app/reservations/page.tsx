@@ -86,9 +86,9 @@ export default function ReservationsPage() {
         <div className="flex items-center justify-between">
           <h2 className="font-display text-xl text-ink">Room board</h2>
           <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-wider text-muted">
-            <Legend color="#2f5d50" label="Occupied" />
-            <Legend color="#b79a4e" label="Arriving" />
-            <Legend color="#ded5c4" label="Open" />
+            <Legend color="#302a24" label="Occupied" />
+            <Legend color="#cbb74c" label="Arriving" />
+            <Legend color="#e1d8c8" label="Open" />
           </div>
         </div>
 

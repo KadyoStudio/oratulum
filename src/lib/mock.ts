@@ -92,11 +92,11 @@ export const PIPELINE_ORDER: LeadStatus[] = [
 
 // Warm → green progression: earlier stages are clay/gold, won stages turn green.
 export const STAGE_COLOR: Record<LeadStatus, string> = {
-  New: "#c06b3e",
-  Contacted: "#d98b5f",
-  Application: "#b79a4e",
-  Deposit: "#4a7e6e",
-  Confirmed: "#2f5d50",
+  New: "#be6b3c",
+  Contacted: "#d08a4a",
+  Application: "#cbb74c",
+  Deposit: "#7a6440",
+  Confirmed: "#302a24",
 };
 
 export type AiThread = {

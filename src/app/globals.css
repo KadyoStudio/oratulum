@@ -5,24 +5,25 @@
   --font-sans: var(--font-dm-sans);
   --font-mono: var(--font-dm-mono);
 
-  --color-jungle-950: #14261f;
-  --color-jungle-900: #1c332b;
-  --color-jungle-800: #244136;
-  --color-jungle-700: #2f5d50;
-  --color-jungle-500: #4a7e6e;
-  --color-jungle-300: #9cbcb0;
+  /* Ora Tulum brand palette — espresso · cream · gold */
+  --color-jungle-950: #221d18;
+  --color-jungle-900: #302a24;
+  --color-jungle-800: #3d352d;
+  --color-jungle-700: #4a3d2f;
+  --color-jungle-500: #7a6a56;
+  --color-jungle-300: #bcac92;
 
-  --color-bone: #f5f0e6;
-  --color-bone-200: #ece4d4;
-  --color-bone-300: #e0d6c2;
+  --color-bone: #f4efe7;
+  --color-bone-200: #ebe3d5;
+  --color-bone-300: #ddd2be;
 
-  --color-clay: #c06b3e;
+  --color-clay: #be6b3c;
   --color-clay-soft: #d98b5f;
-  --color-gold: #b79a4e;
+  --color-gold: #cbb74c;
 
-  --color-ink: #22201b;
-  --color-muted: #8b8271;
-  --color-line: #ded5c4;
+  --color-ink: #302a24;
+  --color-muted: #8a7c68;
+  --color-line: #e1d8c8;
 }
 
 :root {
@@ -36,8 +37,8 @@ html {
 body {
   background-color: var(--color-bone);
   background-image:
-    radial-gradient(1200px 600px at 100% -10%, rgba(47, 93, 80, 0.10), transparent 60%),
-    radial-gradient(900px 500px at -10% 110%, rgba(192, 107, 62, 0.08), transparent 55%);
+    radial-gradient(1200px 600px at 100% -10%, rgba(203, 183, 76, 0.13), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(190, 107, 60, 0.08), transparent 55%);
   background-attachment: fixed;
   color: var(--color-ink);
   font-family: var(--font-sans), system-ui, sans-serif;

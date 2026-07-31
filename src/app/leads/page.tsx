@@ -20,10 +20,10 @@ function ago(min: number) {
 }
 
 const sourceDot: Record<string, string> = {
-  WhatsApp: "#4a7e6e",
-  "Website form": "#c06b3e",
-  Instagram: "#b79a4e",
-  Referral: "#8b8271",
+  WhatsApp: "#6b5a46",
+  "Website form": "#be6b3c",
+  Instagram: "#cbb74c",
+  Referral: "#8a7c68",
 };
 
 export default function LeadsPage() {

@@ -34,12 +34,13 @@ export default function Shell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-dvh md:flex">
       {/* Desktop sidebar */}
-      <aside className="hidden md:flex md:w-64 md:flex-col md:justify-between bg-jungle-900 text-bone px-5 py-7 sticky top-0 h-dvh">
+      <aside className="hidden md:flex md:w-64 md:flex-col md:justify-between border-r border-line bg-bone px-5 py-7 sticky top-0 h-dvh">
         <div>
           <div className="px-2">
-            <div className="font-display text-3xl leading-none tracking-tight">Ora</div>
-            <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.25em] text-jungle-300">
-              Tulum · Command
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/ora-logo.png" alt="Ora Tulum" className="h-14 w-auto" />
+            <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.28em] text-muted">
+              Command Center
             </div>
           </div>
 
@@ -55,16 +56,16 @@ export default function Shell({ children }: { children: React.ReactNode }) {
                   className={[
                     "group flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm transition-colors",
                     active
-                      ? "bg-bone text-jungle-900 font-semibold"
+                      ? "bg-ink text-bone font-semibold"
                       : item.live
-                        ? "text-jungle-300 hover:bg-jungle-800 hover:text-bone"
-                        : "text-jungle-300/45 cursor-default",
+                        ? "text-muted hover:bg-bone-200 hover:text-ink"
+                        : "text-muted/40 cursor-default",
                   ].join(" ")}
                 >
                   <Icon className="size-[18px]" strokeWidth={active ? 2.4 : 1.9} />
                   <span>{item.label}</span>
                   {!item.live && (
-                    <span className="ml-auto font-mono text-[8px] uppercase tracking-wider text-jungle-300/60">
+                    <span className="ml-auto font-mono text-[8px] uppercase tracking-wider text-muted/50">
                       soon
                     </span>
                   )}
@@ -74,13 +75,13 @@ export default function Shell({ children }: { children: React.ReactNode }) {
           </nav>
         </div>
 
-        <div className="flex items-center gap-3 rounded-xl bg-jungle-800/60 px-3 py-2.5">
-          <div className="grid size-9 place-items-center rounded-full bg-clay font-display text-lg text-bone">
+        <div className="flex items-center gap-3 rounded-xl bg-bone-200 px-3 py-2.5">
+          <div className="grid size-9 place-items-center rounded-full bg-ink font-display text-lg text-bone">
             C
           </div>
           <div className="leading-tight">
-            <div className="text-sm font-medium text-bone">Chris Barrett</div>
-            <div className="font-mono text-[10px] uppercase tracking-wider text-jungle-300">
+            <div className="text-sm font-medium text-ink">Chris Barrett</div>
+            <div className="font-mono text-[10px] uppercase tracking-wider text-muted">
               Owner
             </div>
           </div>
@@ -91,13 +92,9 @@ export default function Shell({ children }: { children: React.ReactNode }) {
       <div className="flex-1 pb-24 md:pb-0">
         {/* Mobile top bar */}
         <header className="md:hidden sticky top-0 z-20 flex items-center justify-between border-b border-line bg-bone/85 px-5 py-3 backdrop-blur">
-          <div>
-            <span className="font-display text-2xl leading-none">Ora</span>
-            <span className="ml-2 font-mono text-[9px] uppercase tracking-[0.25em] text-muted">
-              Command
-            </span>
-          </div>
-          <div className="grid size-8 place-items-center rounded-full bg-jungle-900 font-display text-sm text-bone">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/ora-logo.png" alt="Ora Tulum" className="h-9 w-auto" />
+          <div className="grid size-8 place-items-center rounded-full bg-ink font-display text-sm text-bone">
             C
           </div>
         </header>
@@ -119,7 +116,7 @@ export default function Shell({ children }: { children: React.ReactNode }) {
                 href={item.href}
                 className={[
                   "flex flex-1 flex-col items-center gap-1 rounded-lg py-1.5 text-[10px]",
-                  active ? "text-jungle-900" : "text-muted",
+                  active ? "text-ink" : "text-muted",
                 ].join(" ")}
               >
                 <Icon className="size-5" strokeWidth={active ? 2.5 : 1.9} />
