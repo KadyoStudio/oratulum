@@ -187,14 +187,14 @@ export default function Dashboard() {
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-2">
                       <span className="truncate text-sm font-medium text-ink">{l.name}</span>
-                      <span className="font-mono text-[10px] text-muted">{l.country}</span>
+                      <span className="shrink-0 font-mono text-[10px] text-muted">{l.country}</span>
                     </div>
                     <div className="truncate text-xs text-muted">
                       {l.month} · {l.group} {l.group > 1 ? "guests" : "guest"} · {l.ceremony}
                     </div>
                   </div>
-                  <div className="flex flex-col items-end gap-1">
-                    <span className={`rounded-full px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider ${toneClass[meta.tone]}`}>
+                  <div className="flex shrink-0 flex-col items-end gap-1">
+                    <span className={`whitespace-nowrap rounded-full px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider ${toneClass[meta.tone]}`}>
                       {meta.label}
                     </span>
                     <span className="font-mono text-[10px] text-muted">{usd(l.value)}</span>
@@ -220,14 +220,14 @@ export default function Dashboard() {
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-2">
                       <span className="truncate text-sm font-medium text-ink">{t.name}</span>
-                      <span className="font-mono text-[9px] uppercase tracking-wider text-muted">
+                      <span className="shrink-0 font-mono text-[9px] uppercase tracking-wider text-muted">
                         {t.channel}
                       </span>
                     </div>
                     <div className="truncate text-xs text-muted">“{t.snippet}”</div>
                   </div>
-                  <div className="flex flex-col items-end gap-1">
-                    <span className={`rounded-full px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider ${tone}`}>
+                  <div className="flex shrink-0 flex-col items-end gap-1">
+                    <span className={`whitespace-nowrap rounded-full px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider ${tone}`}>
                       {t.status}
                     </span>
                     <span className="font-mono text-[10px] text-muted">{ago(t.agoMin)}</span>
@@ -314,15 +314,15 @@ function Panel({
 }) {
   return (
     <div className="animate-in rounded-3xl border border-line bg-white/70 p-6" style={{ animationDelay: `${delay}s` }}>
-      <div className="flex items-center justify-between">
-        <div className="flex items-baseline gap-2.5">
-          <h2 className="font-display text-xl text-ink">{title}</h2>
-          <span className="font-mono text-[10px] uppercase tracking-wider text-muted">
+      <div className="flex items-center justify-between gap-2">
+        <div className="flex min-w-0 items-baseline gap-2.5">
+          <h2 className="shrink-0 font-display text-xl text-ink">{title}</h2>
+          <span className="truncate font-mono text-[10px] uppercase tracking-wider text-muted">
             {caption}
           </span>
         </div>
         {href && (
-          <button className="flex items-center gap-1 text-xs font-medium text-jungle-700 transition-colors hover:text-clay">
+          <button className="flex shrink-0 items-center gap-1 text-xs font-medium text-jungle-700 transition-colors hover:text-clay">
             View all
             <ChevronRight className="size-3.5" />
           </button>

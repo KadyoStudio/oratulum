@@ -99,7 +99,7 @@ export default function Shell({ children }: { children: React.ReactNode }) {
           </div>
         </header>
 
-        <main className="mx-auto w-full max-w-6xl px-5 py-6 md:px-9 md:py-9">
+        <main className="mx-auto w-full max-w-6xl overflow-x-clip px-5 py-6 md:px-9 md:py-9">
           {children}
         </main>
       </div>

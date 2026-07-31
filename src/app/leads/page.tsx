@@ -75,7 +75,7 @@ export default function LeadsPage() {
       </header>
 
       {/* Summary chips */}
-      <section className="animate-in grid grid-cols-3 gap-3.5" style={{ animationDelay: "0.05s" }}>
+      <section className="animate-in grid grid-cols-3 gap-2.5 sm:gap-3.5" style={{ animationDelay: "0.05s" }}>
         <SummaryChip label="Pipeline value" value={usd(totalValue)} icon={<Layers className="size-4" />} />
         <SummaryChip label="Active leads" value={num(filtered.length)} />
         <SummaryChip label="Confirmed" value={usd(confirmedValue)} hint={`${confPct}% conversion`} accent />
@@ -196,26 +196,26 @@ function SummaryChip({
   return (
     <div
       className={[
-        "rounded-2xl border p-4",
+        "min-w-0 rounded-2xl border p-3 sm:p-4",
         accent
           ? "border-jungle-700/25 bg-jungle-900 text-bone"
           : "border-line bg-white/70",
       ].join(" ")}
     >
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-1">
         <span
           className={[
-            "font-mono text-[10px] uppercase tracking-[0.16em]",
+            "font-mono text-[9px] uppercase tracking-[0.14em] sm:text-[10px]",
             accent ? "text-jungle-300" : "text-muted",
           ].join(" ")}
         >
           {label}
         </span>
-        {icon && <span className={accent ? "text-gold" : "text-jungle-500"}>{icon}</span>}
+        {icon && <span className={`shrink-0 ${accent ? "text-gold" : "text-jungle-500"}`}>{icon}</span>}
       </div>
       <div
         className={[
-          "mt-2 font-display text-2xl leading-none tracking-tight",
+          "mt-2 font-display text-base leading-none tracking-tight sm:text-2xl",
           accent ? "text-bone" : "text-ink",
         ].join(" ")}
       >
