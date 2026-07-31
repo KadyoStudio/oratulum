@@ -267,3 +267,83 @@ export const UPCOMING_RETREATS: Retreat[] = [
   { id: "r4", label: "Aug 19 — Aug 23", guests: 14, rooms: 8, ceremonies: ["Ayahuasca"], state: "Open" },
   { id: "r5", label: "Aug 26 — Aug 30", guests: 30, rooms: 14, ceremonies: ["Bufo Alvarius", "Psilocybin"], state: "Filling" },
 ];
+
+/* ---------- STAFF ---------- */
+export type Arrival = { guest: string; room: string; pax: number; time: string; flight: string };
+export const ARRIVALS: Arrival[] = [
+  { guest: "Owen Clarke", room: "King Suite 5", pax: 1, time: "14:20", flight: "AA 1183" },
+  { guest: "Herrera group", room: "Jungle Villa 6", pax: 4, time: "16:05", flight: "UA 992" },
+  { guest: "Léa Fontaine", room: "King Suite 7", pax: 2, time: "18:40", flight: "AF 178" },
+];
+
+export type Departure = { guest: string; room: string; pax: number; time: string };
+export const DEPARTURES: Departure[] = [
+  { guest: "Yuki Tanaka", room: "King Suite 2", pax: 1, time: "09:30" },
+  { guest: "Grace Liu", room: "Jungle Villa 3", pax: 3, time: "11:00" },
+];
+
+export type Housekeep = { room: string; status: "Clean" | "In progress" | "Pending" };
+export const HOUSEKEEPING: Housekeep[] = [
+  { room: "King Suite 2", status: "In progress" },
+  { room: "Jungle Villa 3", status: "Pending" },
+  { room: "King Suite 5", status: "Clean" },
+  { room: "Jungle Villa 6", status: "Clean" },
+  { room: "King Suite 7", status: "In progress" },
+];
+
+export type Dietary = { guest: string; note: string; severity: "high" | "normal" };
+export const DIETARY: Dietary[] = [
+  { guest: "Sofía Marchetti", note: "Severe nut allergy", severity: "high" },
+  { guest: "James Whitaker", note: "Vegan", severity: "normal" },
+  { guest: "Nadia Haddad", note: "Gluten-free", severity: "normal" },
+];
+
+export type Transfer = { time: string; guest: string; dir: "Pickup" | "Drop-off"; place: string };
+export const TRANSPORT: Transfer[] = [
+  { time: "09:00", guest: "Yuki Tanaka", dir: "Drop-off", place: "CUN Airport" },
+  { time: "14:20", guest: "Owen Clarke", dir: "Pickup", place: "CUN Airport" },
+  { time: "16:05", guest: "Herrera group", dir: "Pickup", place: "CUN Airport" },
+];
+
+export type CeremonySlot = { day: string; name: string; time: string; guests: number };
+export const CEREMONY_SCHEDULE: CeremonySlot[] = [
+  { day: "Thu", name: "Ayahuasca", time: "20:00", guests: 18 },
+  { day: "Sat", name: "Bufo Alvarius", time: "08:00", guests: 12 },
+];
+
+export type Maintenance = { item: string; room: string; priority: "High" | "Medium" | "Low"; status: "Open" | "Scheduled" };
+export const MAINTENANCE: Maintenance[] = [
+  { item: "A/C not cooling", room: "Jungle Villa 3", priority: "High", status: "Open" },
+  { item: "Plunge pool pump check", room: "Jungle Villa 5", priority: "Medium", status: "Scheduled" },
+  { item: "Replace terrace bulb", room: "King Suite 6", priority: "Low", status: "Open" },
+];
+
+/* ---------- PAYMENTS ---------- */
+export const PAY_SUMMARY = {
+  collectedMonth: 186500,
+  outstanding: 32400,
+  depositsPending: 18700,
+  overdue: 5200,
+};
+
+export type PayStatus = "Paid" | "Pending" | "Overdue";
+export type Installment = {
+  id: string;
+  guest: string;
+  kind: "Deposit 50%" | "Balance" | "Full payment";
+  amount: number;
+  due: string;
+  status: PayStatus;
+  method: "Bank transfer" | "Card" | "Crypto";
+};
+
+export const INSTALLMENTS: Installment[] = [
+  { id: "p1", guest: "Elise Vandermeer", kind: "Balance", amount: 7050, due: "Aug 1", status: "Paid", method: "Bank transfer" },
+  { id: "p2", guest: "Grace Liu", kind: "Balance", amount: 7600, due: "Aug 1", status: "Paid", method: "Card" },
+  { id: "p3", guest: "Nadia Haddad", kind: "Deposit 50%", amount: 9400, due: "Aug 3", status: "Pending", method: "Bank transfer" },
+  { id: "p4", guest: "Lucas Fenn", kind: "Deposit 50%", amount: 2600, due: "Aug 4", status: "Pending", method: "Card" },
+  { id: "p5", guest: "Rosa Delgado", kind: "Deposit 50%", amount: 6950, due: "Jul 28", status: "Overdue", method: "Bank transfer" },
+  { id: "p6", guest: "Yuki Tanaka", kind: "Full payment", amount: 5100, due: "Jul 20", status: "Paid", method: "Crypto" },
+  { id: "p7", guest: "James Whitaker", kind: "Balance", amount: 11700, due: "Aug 8", status: "Pending", method: "Bank transfer" },
+  { id: "p8", guest: "Marcus Reed", kind: "Deposit 50%", amount: 11250, due: "Aug 10", status: "Pending", method: "Card" },
+];

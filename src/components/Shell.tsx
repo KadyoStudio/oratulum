@@ -14,17 +14,17 @@ import {
 } from "lucide-react";
 
 const NAV = [
-  { href: "/", label: "Command", icon: LayoutDashboard, live: true },
-  { href: "/leads", label: "Leads", icon: Users, live: true },
-  { href: "/reservations", label: "Reservations", icon: CalendarDays, live: true },
-  { href: "/conversations", label: "Concierge", icon: MessagesSquare, live: true },
-  { href: "/staff", label: "Staff", icon: ConciergeBell, live: true },
-  { href: "/payments", label: "Payments", icon: CreditCard, live: false },
-  { href: "/sops", label: "SOPs", icon: BookOpen, live: false },
-  { href: "/settings", label: "Settings", icon: Settings, live: false },
+  { href: "/", label: "Command", short: "Home", icon: LayoutDashboard, live: true },
+  { href: "/leads", label: "Leads", short: "Leads", icon: Users, live: true },
+  { href: "/reservations", label: "Reservations", short: "Rooms", icon: CalendarDays, live: true },
+  { href: "/conversations", label: "Concierge", short: "Chat", icon: MessagesSquare, live: true },
+  { href: "/staff", label: "Staff", short: "Staff", icon: ConciergeBell, live: true },
+  { href: "/payments", label: "Payments", short: "Pay", icon: CreditCard, live: true },
+  { href: "/sops", label: "SOPs", short: "SOPs", icon: BookOpen, live: false },
+  { href: "/settings", label: "Settings", short: "Set", icon: Settings, live: false },
 ];
 
-const MOBILE_NAV = NAV.filter((n) => n.live).slice(0, 5);
+const MOBILE_NAV = NAV.filter((n) => n.live).slice(0, 6);
 
 export default function Shell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -123,7 +123,7 @@ export default function Shell({ children }: { children: React.ReactNode }) {
                 ].join(" ")}
               >
                 <Icon className="size-5" strokeWidth={active ? 2.5 : 1.9} />
-                <span className="font-medium">{item.label}</span>
+                <span className="font-medium">{item.short}</span>
               </Link>
             );
           })}
