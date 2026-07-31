@@ -23,7 +23,7 @@ export default function Stub({
         <div className="inline-flex items-center gap-2 rounded-full bg-jungle-700/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-jungle-700">
           In this module
         </div>
-        <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
+        <ul className="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
           {points.map((p) => (
             <li key={p} className="flex items-start gap-2.5 text-sm text-ink">
               <span className="mt-2 size-1.5 shrink-0 rounded-full bg-clay" />

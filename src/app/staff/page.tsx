@@ -55,7 +55,7 @@ export default function StaffPage() {
       </section>
 
       {/* Arrivals & Departures */}
-      <section className="animate-in grid gap-5 lg:grid-cols-2" style={{ animationDelay: "0.1s" }}>
+      <section className="animate-in grid grid-cols-1 gap-5 lg:grid-cols-2" style={{ animationDelay: "0.1s" }}>
         <Panel title="Arrivals today" icon={<PlaneLanding className="size-4 text-jungle-500" />}>
           <ul className="divide-y divide-line/70">
             {ARRIVALS.map((a) => (
@@ -90,7 +90,7 @@ export default function StaffPage() {
       </section>
 
       {/* Housekeeping + Dietary */}
-      <section className="animate-in grid gap-5 lg:grid-cols-2" style={{ animationDelay: "0.16s" }}>
+      <section className="animate-in grid grid-cols-1 gap-5 lg:grid-cols-2" style={{ animationDelay: "0.16s" }}>
         <Panel title="Housekeeping" icon={<BedDouble className="size-4 text-jungle-500" />}>
           <div className="flex flex-col gap-2">
             {HOUSEKEEPING.map((h) => (
@@ -128,7 +128,7 @@ export default function StaffPage() {
       </section>
 
       {/* Ceremony + Transport + Maintenance */}
-      <section className="animate-in grid gap-5 lg:grid-cols-3" style={{ animationDelay: "0.22s" }}>
+      <section className="animate-in grid grid-cols-1 gap-5 lg:grid-cols-3" style={{ animationDelay: "0.22s" }}>
         <Panel title="Ceremony schedule" icon={<Sparkles className="size-4 text-gold" />}>
           <div className="flex flex-col gap-2.5">
             {CEREMONY_SCHEDULE.map((c) => (

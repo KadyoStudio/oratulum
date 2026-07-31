@@ -84,7 +84,7 @@ export default function ConciergePage() {
       </div>
 
       {/* Inbox + conversation */}
-      <section className="animate-in grid gap-4 lg:grid-cols-[340px_1fr]" style={{ animationDelay: "0.15s" }}>
+      <section className="animate-in grid grid-cols-1 gap-4 lg:grid-cols-[340px_1fr]" style={{ animationDelay: "0.15s" }}>
         {/* Thread list */}
         <div className={`${mobileChat ? "hidden" : "block"} lg:block`}>
           <ul className="flex flex-col gap-2">

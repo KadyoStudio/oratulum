@@ -97,7 +97,7 @@ export default function Dashboard() {
       </section>
 
       {/* Revenue + AI row */}
-      <section className="grid gap-5 lg:grid-cols-3">
+      <section className="grid grid-cols-1 gap-5 lg:grid-cols-3">
         {/* Revenue trend */}
         <div className="animate-in lg:col-span-2 rounded-3xl border border-line bg-white/70 p-6" style={{ animationDelay: "0.2s" }}>
           <div className="flex items-center justify-between">
@@ -173,7 +173,7 @@ export default function Dashboard() {
       </section>
 
       {/* Inquiries + threads */}
-      <section className="grid gap-5 lg:grid-cols-2">
+      <section className="grid grid-cols-1 gap-5 lg:grid-cols-2">
         {/* New inquiries */}
         <Panel title="New inquiries" caption={`${KPIS.newInquiries} this week`} href delay={0.32}>
           <ul className="divide-y divide-line/70">
