@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fraunces, DM_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
 import Shell from "@/components/Shell";
@@ -26,6 +26,18 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   title: "Ora Tulum — Command Center",
   description: "Guest, reservation and revenue command center for Ora Tulum.",
+  applicationName: "Ora",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Ora",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#1c332b",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
